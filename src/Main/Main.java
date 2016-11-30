@@ -1,4 +1,4 @@
-package Maze;
+package Main;
 
 import javax.swing.*;
 import java.awt.*;
@@ -6,7 +6,7 @@ import java.awt.*;
 /**
  * Created by Peeter on 29-Nov-16.
  */
-public class Game {
+public class Main {
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("Game by Peep Kuulme C11");

@@ -1,4 +1,6 @@
-package Maze;
+package Main;
+
+import Game.GameStateManager;
 
 import javax.swing.*;
 import java.awt.*;
@@ -10,14 +12,14 @@ import java.awt.event.KeyListener;
  */
 public class GamePanel extends JPanel implements Runnable, KeyListener{
 
-    public static final int WIDTH = 800;
-    public static final int HEIGHT = 600;
+    public static  int WIDTH = 600;
+    public static  int HEIGHT = 600;
 
     private Thread thread;
     private Boolean isRunning = false;
 
     private int FPS = 60;
-    private long targetTime = 1000/FPS;
+    private long targetTime = 400/FPS;
 
     private GameStateManager gsm;
 
@@ -71,7 +73,8 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
 
     public void paintComponent(Graphics g){
         super.paintComponent(g);
-        g.clearRect(0,0,WIDTH,HEIGHT);
+        g.setColor(Color.darkGray);
+        g.fillRect(0,0,WIDTH,HEIGHT);
         gsm.draw(g);
 
     }

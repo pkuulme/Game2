@@ -1,4 +1,4 @@
-package Maze;
+package Game;
 
 import java.awt.*;
 import java.util.Stack;
@@ -7,10 +7,10 @@ import java.util.Stack;
  * Created by Peeter on 29-Nov-16.
  */
 public class GameStateManager {
-    private Stack<GameState> states;
+    public Stack<GameState> states;
     public GameStateManager(){
-        states = new Stack<GameState>();
-        states.push(new MenuState(this));
+        states = new Stack<>();
+        states.push(new Menu(this));
     }
     public void tick(){
         states.peek().tick();

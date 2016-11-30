@@ -1,4 +1,6 @@
-package Maze;
+package Game;
+
+import Main.GamePanel;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -6,12 +8,12 @@ import java.awt.event.KeyEvent;
 /**
  * Created by Peeter on 29-Nov-16.
  */
-public class MenuState extends GameState{
+public class Menu extends GameState {
 
     private String[] options = {"Start","Help","Quit"};
     private int currentSelection = 0;
 
-    public MenuState(GameStateManager gsm){
+    public Menu(GameStateManager gsm){
         super(gsm);
     }
 
@@ -26,7 +28,7 @@ public class MenuState extends GameState{
     public void draw(Graphics g) {
 
         g.setColor(new Color(20,10,70));
-        g.fillRect(0,0,GamePanel.WIDTH,GamePanel.HEIGHT);
+        g.fillRect(0,0, GamePanel.WIDTH,GamePanel.HEIGHT);
         for (int i = 0; i <options.length; i++) {
             if (i == currentSelection){
                 g.setColor(Color.green);
@@ -53,8 +55,7 @@ public class MenuState extends GameState{
         }
         if (k == KeyEvent.VK_ENTER) {
             if (currentSelection == 0) {
-
-
+                gsm.states.push(new Level1(gsm));
             } else if (currentSelection == 1) {
 
             }else if (currentSelection == 2) {
