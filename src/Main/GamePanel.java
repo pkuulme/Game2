@@ -1,6 +1,6 @@
 package Main;
 
-import Game.GameStateManager;
+import Game.CurrentGameState;
 
 import javax.swing.*;
 import java.awt.*;
@@ -21,7 +21,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
     private int FPS = 60;
     private long targetTime = 400/FPS;
 
-    private GameStateManager gsm;
+    private CurrentGameState gsm;
 
 
 
@@ -43,13 +43,14 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
     public void run(){
         long start, elapsed, wait;
 
-        gsm = new GameStateManager();
+        gsm = new CurrentGameState();
 
         while (isRunning){
             start = System.nanoTime();
 
             tick();
             repaint();
+
 
             elapsed = System.nanoTime() - start;
             wait = targetTime - elapsed / 1000000;

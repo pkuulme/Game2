@@ -10,10 +10,10 @@ import java.awt.event.KeyEvent;
  */
 public class Menu extends GameState {
 
-    private String[] options = {"Start","Help","Quit"};
+    private String[] options = {"Start","About","Exit"};
     private int currentSelection = 0;
 
-    public Menu(GameStateManager gsm){
+    public Menu(CurrentGameState gsm){
         super(gsm);
     }
 
@@ -29,7 +29,7 @@ public class Menu extends GameState {
 
         g.setColor(new Color(20,10,70));
         g.fillRect(0,0, GamePanel.WIDTH,GamePanel.HEIGHT);
-        for (int i = 0; i <options.length; i++) {
+        for (int i = 0; i < options.length; i++) {
             if (i == currentSelection){
                 g.setColor(Color.green);
             }else{
@@ -55,8 +55,9 @@ public class Menu extends GameState {
         }
         if (k == KeyEvent.VK_ENTER) {
             if (currentSelection == 0) {
-                gsm.states.push(new Level1(gsm));
+                cgs.states.push(new Level1(cgs));
             } else if (currentSelection == 1) {
+                cgs.states.push(new About(cgs));
 
             }else if (currentSelection == 2) {
                 System.exit(0);

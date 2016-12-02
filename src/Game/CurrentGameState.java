@@ -1,14 +1,16 @@
 package Game;
 
+import Objects.Player;
+
 import java.awt.*;
 import java.util.Stack;
 
 /**
  * Created by Peeter on 29-Nov-16.
  */
-public class GameStateManager {
+public class CurrentGameState {
     public Stack<GameState> states;
-    public GameStateManager(){
+    public CurrentGameState(){
         states = new Stack<>();
         states.push(new Menu(this));
     }

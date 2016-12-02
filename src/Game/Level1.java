@@ -14,7 +14,8 @@ public class Level1 extends GameState {
 
     private Block[] b;
 
-    public Level1(GameStateManager gsm){
+    public Level1(CurrentGameState gsm){
+
         super(gsm);
     }
 

@@ -1,6 +1,8 @@
 package Game;
 
 
+import Objects.Player;
+
 import java.awt.*;
 
 /**
@@ -8,14 +10,14 @@ import java.awt.*;
 
 
 public abstract class GameState {
-    protected GameStateManager gsm;
+    protected CurrentGameState cgs;
     public static double xOffset;
     public static double yOffset;
-    public GameState(GameStateManager gsm){
-        this.gsm = gsm;
+    public GameState(CurrentGameState cgs){
+        this.cgs = cgs;
 
-        this.xOffset = 0;
-        this.yOffset = 0;
+        xOffset = 0;
+        yOffset = 0;
         init();
     }
     public abstract void init();
