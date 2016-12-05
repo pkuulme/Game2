@@ -1,5 +1,8 @@
 package Objects;
 
+import Game.CurrentGameState;
+import Game.Finish;
+import Game.Level1;
 import Main.Collision;
 import Game.GameState;
 
@@ -9,7 +12,20 @@ import java.awt.event.KeyEvent;
 /**
  * Created by Peeter on 29-Nov-16.
  */
-public class Player  {
+
+public class Player extends GameState{
+
+
+
+    @Override
+    public void init() {
+
+    }
+
+    @Override
+    public void tick() {
+
+    }
 
 
     //Movement booleans
@@ -21,7 +37,9 @@ public class Player  {
 
 
 
-    public  Player(int width, int height){
+    public  Player(CurrentGameState gsm, int width, int height){
+        super(gsm);
+
         x = 0;
         y = 110;
         this.width = width;
@@ -67,6 +85,8 @@ public class Player  {
             }
             if (iX == 570) {
                 right = false;
+                cgs.states.push(new Finish(cgs));
+
 
 
             }

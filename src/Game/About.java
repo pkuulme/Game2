@@ -10,8 +10,7 @@ import java.awt.event.KeyEvent;
  * Created by Peeter on 02-Dec-16.
  */
 public class About extends GameState {
-
-    JLabel jl = new JLabel();
+    
 
     public About(CurrentGameState gsm){
         super(gsm);

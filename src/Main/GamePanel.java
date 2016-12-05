@@ -6,6 +6,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.sql.Time;
 
 /**
  * Created by Peeter on 29-Nov-16.
@@ -54,6 +55,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
 
             elapsed = System.nanoTime() - start;
             wait = targetTime - elapsed / 1000000;
+
 
             if (wait <= 0){
                 wait = 5;

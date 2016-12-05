@@ -10,7 +10,7 @@ import java.awt.*;
  */
 public class Level1 extends GameState {
 
-    private Player player;
+    public Player player;
 
     public static Block[] b;
 
@@ -20,7 +20,7 @@ public class Level1 extends GameState {
     }
 
     public void init() {
-        player = new Player(30,30);
+        player = new Player(cgs,30,30);
 
         b = new Block[34];
         b[0] = new Block(0,0);
@@ -86,4 +86,5 @@ public class Level1 extends GameState {
     public void keyReleased(int k) {
         player.keyReleased(k);
     }
+
 }
