@@ -4,6 +4,7 @@ import Objects.Block;
 import Objects.Player;
 
 import java.awt.*;
+import java.awt.event.KeyEvent;
 
 /**
  * Created by Peeter on 29-Nov-16.
@@ -80,6 +81,9 @@ public class Level1 extends GameState {
 
     public void keyPressed(int k) {
         player.keyPressed(k);
+        if (k == KeyEvent.VK_ESCAPE){
+            cgs.states.push(new Menu(cgs));
+        }
     }
 
 
