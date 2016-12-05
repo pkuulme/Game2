@@ -12,7 +12,7 @@ public class Level1 extends GameState {
 
     private Player player;
 
-    private Block[] b;
+    public static Block[] b;
 
     public Level1(CurrentGameState gsm){
 
@@ -56,7 +56,7 @@ public class Level1 extends GameState {
         b[30] = new Block(350,190);
         b[31] = new Block(50,430);
         b[32] = new Block(200,350);
-        b[33] = new Block(400,460);
+        b[33] = new Block(400,470);
 
     }
 

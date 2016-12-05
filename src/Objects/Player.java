@@ -43,14 +43,14 @@ public class Player  {
 
             }
             //Left
-             if (Collision.playerBlock(new Point(iX   + (int)GameState.xOffset ,iY + (int)GameState.yOffset + 2 ), b[i])
-                    || Collision.playerBlock(new Point (iX   +(int)GameState.xOffset  , iY + height+ (int)GameState.yOffset -2),b[i])){
+             if (Collision.playerBlock(new Point(iX + (int)GameState.xOffset -2  ,iY + (int)GameState.yOffset + 1 ), b[i])
+                    || Collision.playerBlock(new Point (iX   +(int)GameState.xOffset -2  , iY + height+ (int)GameState.yOffset -2),b[i])){
 
                 left = false;
             }
             //Up
-              if (Collision.playerBlock(new Point(iX +(int)GameState.xOffset + 1,iY + (int)GameState.yOffset  ), b[i])
-                    || Collision.playerBlock(new Point (iX  + width + (int)GameState.xOffset - 1, iY + (int)GameState.yOffset  ),b[i])){
+              if (Collision.playerBlock(new Point(iX  +(int)GameState.xOffset + 1,iY + (int)GameState.yOffset - 2  ), b[i])
+                    || Collision.playerBlock(new Point (iX  + width + (int)GameState.xOffset - 1, iY + (int)GameState.yOffset - 2  ),b[i])){
 
                 up  = false;
 
@@ -67,6 +67,7 @@ public class Player  {
             }
             if (iX == 570) {
                 right = false;
+
 
             }
 

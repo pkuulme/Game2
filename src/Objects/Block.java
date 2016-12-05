@@ -17,8 +17,6 @@ public class Block extends Rectangle{
     public Block(int x, int y){
         setBounds(x,y,blockSizeX,BlockSizeY);
     }
-
-
     public void tick(){
 
     }
