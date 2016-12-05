@@ -1,6 +1,7 @@
 package Game;
 
 import java.awt.*;
+import java.awt.event.KeyEvent;
 
 /**
  * Created by Peeter on 05-Dec-16.
@@ -22,7 +23,7 @@ public class Finish extends GameState {
 
     public void draw(Graphics g) {
 
-        g.setColor(Color.GRAY);
+        g.setColor(Color.DARK_GRAY);
         g.fillRect(0,0,600,600);
 
         g.setColor(Color.white);
@@ -33,6 +34,9 @@ public class Finish extends GameState {
 
 
     public void keyPressed(int k) {
+        if (k == KeyEvent.VK_ENTER){
+            System.exit(0);
+        }
 
     }
 

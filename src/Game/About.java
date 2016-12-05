@@ -10,7 +10,7 @@ import java.awt.event.KeyEvent;
  * Created by Peeter on 02-Dec-16.
  */
 public class About extends GameState {
-    
+
 
     public About(CurrentGameState gsm){
         super(gsm);
@@ -28,7 +28,7 @@ public class About extends GameState {
     public void draw(Graphics g) {
         g.setFont(new Font("Arial",Font.BOLD,42));
         g.setColor(new Color(200,200,250));
-        g.drawString("Get through the maze", 50,200);
+        g.drawString("Get through the maze", 80,200);
         g.drawString("before the time runs out", 50,300);
 
 

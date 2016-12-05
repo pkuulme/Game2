@@ -10,6 +10,7 @@ import java.util.Stack;
  */
 public class CurrentGameState {
     public Stack<GameState> states;
+
     public CurrentGameState(){
         states = new Stack<>();
         states.push(new Menu(this));

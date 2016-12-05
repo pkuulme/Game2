@@ -28,7 +28,7 @@ public class Menu extends GameState {
 
     public void draw(Graphics g) {
 
-        g.setColor(new Color(20,10,70));
+        g.setColor(Color.DARK_GRAY);
         g.fillRect(0,0, GamePanel.WIDTH,GamePanel.HEIGHT);
         for (int i = 0; i < options.length; i++) {
             if (i == currentSelection){
