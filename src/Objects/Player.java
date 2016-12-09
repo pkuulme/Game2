@@ -61,7 +61,7 @@ public class Player extends GameState{
 
             }
             //Left
-             if (Collision.playerBlock(new Point(iX + (int)GameState.xOffset - 2  ,iY + (int)GameState.yOffset - 2 ), b[i])
+             if (Collision.playerBlock(new Point(iX + (int)GameState.xOffset - 2  ,iY + (int)GameState.yOffset + 2 ), b[i])
                     || Collision.playerBlock(new Point (iX   +(int)GameState.xOffset - 2  , iY + height+ (int)GameState.yOffset -2),b[i])){
 
                 left = false;

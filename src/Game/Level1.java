@@ -36,7 +36,7 @@ public class Level1 extends GameState {
         b[9] = new Block(250,20);
         b[10] = new Block(200,160);
         b[11] = new Block(300,160);
-        b[12] = new Block(350,160);
+        b[12] = new Block(360,160);
         b[13] = new Block(500,100);
         b[14] = new Block(500,200);
         b[15] = new Block(500,230);
@@ -53,7 +53,7 @@ public class Level1 extends GameState {
         b[26] = new Block(300,500);
         b[27] = new Block(400,500);
         b[28] = new Block(500,500);
-        b[29] = new Block(180,310);
+        b[29] = new Block(190,310);
         b[30] = new Block(350,190);
         b[31] = new Block(50,430);
         b[32] = new Block(200,350);

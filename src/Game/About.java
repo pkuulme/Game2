@@ -28,8 +28,8 @@ public class About extends GameState {
     public void draw(Graphics g) {
         g.setFont(new Font("Arial",Font.BOLD,42));
         g.setColor(new Color(200,200,250));
-        g.drawString("Get through the maze", 80,200);
-        g.drawString("before the time runs out", 50,300);
+        g.drawString("Use arrow keys", 140,200);
+        g.drawString("To get out of the maze", 100,300);
 
 
 
