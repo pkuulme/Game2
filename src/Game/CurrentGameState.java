@@ -1,7 +1,4 @@
 package Game;
-
-import Objects.Player;
-
 import java.awt.*;
 import java.util.Stack;
 

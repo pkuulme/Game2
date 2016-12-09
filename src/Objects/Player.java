@@ -2,7 +2,6 @@ package Objects;
 
 import Game.CurrentGameState;
 import Game.Finish;
-import Game.Level1;
 import Main.Collision;
 import Game.GameState;
 
@@ -27,9 +26,10 @@ public class Player extends GameState{
 
     }
 
-
-    //Movement booleans
-    private boolean right = false, left = false, up = false, down = false;
+    private boolean right = false;
+    private boolean left = false;
+    private boolean up = false;
+    private boolean down = false;
 
     //Bounds
     private double x,y;
@@ -61,8 +61,8 @@ public class Player extends GameState{
 
             }
             //Left
-             if (Collision.playerBlock(new Point(iX + (int)GameState.xOffset -2  ,iY + (int)GameState.yOffset + 1 ), b[i])
-                    || Collision.playerBlock(new Point (iX   +(int)GameState.xOffset -2  , iY + height+ (int)GameState.yOffset -2),b[i])){
+             if (Collision.playerBlock(new Point(iX + (int)GameState.xOffset - 2  ,iY + (int)GameState.yOffset - 2 ), b[i])
+                    || Collision.playerBlock(new Point (iX   +(int)GameState.xOffset - 2  , iY + height+ (int)GameState.yOffset -2),b[i])){
 
                 left = false;
             }
@@ -75,7 +75,7 @@ public class Player extends GameState{
             }
             //Down
             if (Collision.playerBlock(new Point(iX + (int)GameState.xOffset + 1,iY + height + (int)GameState.yOffset ), b[i])
-                    || Collision.playerBlock(new Point (iX  + width + (int)GameState.xOffset - 1, iY + height+ (int)GameState.yOffset ),b[i])){
+                    || Collision.playerBlock(new Point (iX  + width + (int)GameState.xOffset - 1, iY + height+ (int)GameState.yOffset  ),b[i])){
 
                   down = false;
 
