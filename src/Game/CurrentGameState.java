@@ -12,6 +12,8 @@ public class CurrentGameState {
         states = new Stack<>();
         states.push(new Menu(this));
     }
+
+    //Updates the current state on top of the stack
     public void tick(){
         states.peek().tick();
     }

@@ -31,7 +31,6 @@ public class Player extends GameState{
     private boolean up = false;
     private boolean down = false;
 
-    //Bounds
     private double x,y;
     private int width,height;
 

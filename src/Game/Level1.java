@@ -13,6 +13,11 @@ public class Level1 extends GameState {
 
     public Player player;
 
+    public int time = 3000;
+    public int timer;
+    public double sec = 0.00001;
+    private int counter;
+
     public static Block[] b;
 
     public Level1(CurrentGameState gsm){
@@ -75,8 +80,16 @@ public class Level1 extends GameState {
 
         for (int i = 0; i < b.length; i++) {
             b[i].draw(g);
-
         }
+        timer = (int) (time - sec);
+        counter = timer/10;
+
+
+
+        g.setColor(Color.blue);
+        g.fillRect(10,10,counter,40);
+        timer = (time -=0.1);
+
     }
 
     public void keyPressed(int k) {
