@@ -35,7 +35,7 @@ public class Menu extends GameState {
                 g.setColor(Color.white);
             }
             g.setFont(new Font("Arial",Font.BOLD,72));
-            g.drawString(options[i], GamePanel.WIDTH/2 - 75,150 + i*150);
+            g.drawString(options[i], GamePanel.WIDTH/2 - 85,150 + i*150);
         }
 
     }

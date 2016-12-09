@@ -30,6 +30,7 @@ public class About extends GameState {
         g.setColor(new Color(200,200,250));
         g.drawString("Use arrow keys", 140,200);
         g.drawString("To get out of the maze", 100,300);
+        g.drawString("Before the time runs out", 80,400);
 
 
 
