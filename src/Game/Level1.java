@@ -13,9 +13,8 @@ public class Level1 extends GameState {
 
     public Player player;
 
-    public int time = 3000;
+    public int time = 2300;
     public int timer;
-    public double sec = 0.00001;
     private int counter;
 
     public static Block[] b;
@@ -81,16 +80,25 @@ public class Level1 extends GameState {
         for (int i = 0; i < b.length; i++) {
             b[i].draw(g);
         }
-        timer = (int) (time - sec);
-        counter = timer/10;
+        timer = (time - 2);
+        counter = timer / 10;
 
 
 
+
+        g.setColor(Color.darkGray);
+        g.fillRect(10,10,230,40);
         g.setColor(Color.blue);
         g.fillRect(10,10,counter,40);
+        g.setColor(Color.WHITE);
+        g.drawRect(10,10,230,40);
         timer = (time -=0.1);
 
+        if (timer == 0) {
+            cgs.states.push(new TimeOut(cgs));
+        }
     }
+
 
     public void keyPressed(int k) {
         player.keyPressed(k);
