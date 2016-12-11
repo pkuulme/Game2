@@ -27,7 +27,7 @@ public class About extends GameState {
 
     public void draw(Graphics g) {
         g.setFont(new Font("Arial",Font.BOLD,42));
-        g.setColor(new Color(200,200,250));
+        g.setColor(Color.white);
         g.drawString("Use arrow keys", 140,200);
         g.drawString("To get out of the maze", 100,300);
         g.drawString("Before the time runs out", 80,400);
@@ -38,6 +38,10 @@ public class About extends GameState {
 
     public void keyPressed(int k) {
         if (k == KeyEvent.VK_ESCAPE) {
+
+            cgs.states.push(new Menu(cgs));
+        }
+        if (k == KeyEvent.VK_ENTER) {
 
             cgs.states.push(new Menu(cgs));
         }

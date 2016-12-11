@@ -30,8 +30,9 @@ public class TimeOut extends GameState {
         g.setColor(Color.white);
         g.setFont(new Font("Arial", Font.BOLD, 49));
         g.drawString("You ran out of time", 100, 200);
-        g.drawString("Press enter to try again", 30, 300);
-        g.drawString("Press Esc to exit", 110, 400);
+        g.setFont(new Font("Arial",Font.BOLD,24));
+        g.drawString("Press enter to try again", 180, 470);
+        g.drawString("Press Esc to exit", 210, 500);
 
 
     }

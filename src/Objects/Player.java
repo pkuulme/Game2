@@ -4,7 +4,6 @@ import Game.CurrentGameState;
 import Game.Finish;
 import Main.Collision;
 import Game.GameState;
-
 import java.awt.*;
 import java.awt.event.KeyEvent;
 
@@ -53,28 +52,28 @@ public class Player extends GameState{
         for (int i = 0; i < b.length ; i++) {
 
             //Right
-            if (Collision.playerBlock(new Point(iX  + width + (int)GameState.xOffset ,iY + (int)GameState.yOffset + 2), b[i])
-                    || Collision.playerBlock(new Point (iX + width + (int)GameState.xOffset , iY + height + (int)GameState.yOffset - 1),b[i])){
+            if (Collision.playerBlock(new Point(iX  + width +  1 ,iY +  2), b[i])
+                    || Collision.playerBlock(new Point (iX + width +  1 , iY + height  - 1),b[i])){
 
                right = false;
 
             }
             //Left
-             if (Collision.playerBlock(new Point(iX + (int)GameState.xOffset - 2  ,iY + (int)GameState.yOffset + 2 ), b[i])
-                    || Collision.playerBlock(new Point (iX   +(int)GameState.xOffset - 2  , iY + height+ (int)GameState.yOffset -2),b[i])){
+             if (Collision.playerBlock(new Point(iX - 2  ,iY + 2 ), b[i])
+                    || Collision.playerBlock(new Point (iX - 2  , iY + height - 2),b[i])){
 
                 left = false;
             }
             //Up
-              if (Collision.playerBlock(new Point(iX  +(int)GameState.xOffset + 1,iY + (int)GameState.yOffset - 2  ), b[i])
-                    || Collision.playerBlock(new Point (iX  + width + (int)GameState.xOffset - 1, iY + (int)GameState.yOffset - 2  ),b[i])){
+              if (Collision.playerBlock(new Point(iX   - 1,iY - 2  ), b[i])
+                    || Collision.playerBlock(new Point (iX  + width - 1, iY - 2  ),b[i])){
 
                 up  = false;
 
             }
             //Down
-            if (Collision.playerBlock(new Point(iX + (int)GameState.xOffset + 1,iY + height + (int)GameState.yOffset ), b[i])
-                    || Collision.playerBlock(new Point (iX  + width + (int)GameState.xOffset - 1, iY + height+ (int)GameState.yOffset  ),b[i])){
+            if (Collision.playerBlock(new Point(iX + 1,iY + height ), b[i])
+                    || Collision.playerBlock(new Point (iX  + width - 1, iY + height),b[i])){
 
                   down = false;
 

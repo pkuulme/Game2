@@ -8,13 +8,8 @@ import java.awt.*;
 
 public abstract class GameState {
     protected CurrentGameState cgs;
-    public static double xOffset;
-    public static double yOffset;
     public GameState(CurrentGameState cgs){
         this.cgs = cgs;
-
-        xOffset = 0;
-        yOffset = 0;
         init();
     }
     public abstract void init();
