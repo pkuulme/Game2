@@ -12,10 +12,9 @@ import java.awt.event.KeyEvent;
 public class Level1 extends GameState {
 
     public Player player;
-
     public int time = 2300;
     public int timer;
-    private int counter;
+    public int counter;
 
     public static Block[] b;
 
@@ -93,6 +92,7 @@ public class Level1 extends GameState {
         g.setColor(Color.WHITE);
         g.drawRect(10,10,230,40);
         timer = (time -=0.1);
+
 
         if (timer == 0) {
             cgs.states.push(new TimeOut(cgs));

@@ -6,6 +6,7 @@ import Main.Collision;
 import Game.GameState;
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import Game.Level1;
 
 /**
  * Created by Peeter on 29-Nov-16.
@@ -84,6 +85,7 @@ public class Player extends GameState{
             if (iX == 570) {
                 right = false;
                 cgs.states.push(new Finish(cgs));
+
 
 
 

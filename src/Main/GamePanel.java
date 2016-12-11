@@ -20,7 +20,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
     private int FPS = 60;
     private long targetTime = 400/FPS;
 
-    private CurrentGameState gsm;
+    private CurrentGameState csm;
 
 
 
@@ -42,7 +42,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
     public void run(){
         long start, elapsed, wait;
 
-        gsm = new CurrentGameState();
+        csm = new CurrentGameState();
 
         while (isRunning){
             start = System.nanoTime();
@@ -68,7 +68,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
 
     }
     public void tick(){
-        gsm.tick();
+        csm.tick();
 
     }
 
@@ -76,7 +76,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
         super.paintComponent(g);
         g.setColor(Color.darkGray);
         g.fillRect(0,0,WIDTH,HEIGHT);
-        gsm.draw(g);
+        csm.draw(g);
 
     }
 
@@ -84,10 +84,10 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
     }
 
     public void keyPressed(KeyEvent e) {
-        gsm.keyPressed(e.getKeyCode());
+        csm.keyPressed(e.getKeyCode());
     }
 
     public void keyReleased(KeyEvent e) {
-        gsm.keyReleased(e.getKeyCode());
+        csm.keyReleased(e.getKeyCode());
     }
 }
