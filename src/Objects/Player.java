@@ -1,12 +1,10 @@
 package Objects;
 
-import Game.CurrentGameState;
-import Game.Finish;
+import Game.*;
 import Main.Collision;
-import Game.GameState;
+
 import java.awt.*;
 import java.awt.event.KeyEvent;
-import Game.Level1;
 
 /**
  * Created by Peeter on 29-Nov-16.
@@ -57,6 +55,7 @@ public class Player extends GameState{
                     || Collision.playerBlock(new Point (iX + width +  1 , iY + height  - 1),b[i])){
 
                right = false;
+                cgs.states.push(new Touch(cgs));
 
             }
             //Left
@@ -64,12 +63,14 @@ public class Player extends GameState{
                     || Collision.playerBlock(new Point (iX - 2  , iY + height - 2),b[i])){
 
                 left = false;
+                 cgs.states.push(new Touch(cgs));
             }
             //Up
               if (Collision.playerBlock(new Point(iX   - 1,iY - 2  ), b[i])
                     || Collision.playerBlock(new Point (iX  + width - 1, iY - 2  ),b[i])){
 
                 up  = false;
+                  cgs.states.push(new Touch(cgs));
 
             }
             //Down
@@ -77,6 +78,7 @@ public class Player extends GameState{
                     || Collision.playerBlock(new Point (iX  + width - 1, iY + height),b[i])){
 
                   down = false;
+                cgs.states.push(new Touch(cgs));
 
             }
             if (iX == 0) {
@@ -92,6 +94,8 @@ public class Player extends GameState{
             }
 
         }
+
+
         if (right){
             iX = (int) x++;
 

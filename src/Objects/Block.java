@@ -9,14 +9,11 @@ import java.awt.*;
  */
 public class Block extends Rectangle{
 
-    public static final int blockSizeX = 100;
-    public static final int BlockSizeY = 100;
+        public Block(int x, int y, int blockSizeX, int blockSizeY){
+            setBounds(x,y,blockSizeX,blockSizeY);
+        }
 
 
-
-    public Block(int x, int y){
-        setBounds(x,y,blockSizeX,BlockSizeY);
-    }
     public void tick(){
 
     }
